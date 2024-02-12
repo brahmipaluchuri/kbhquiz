@@ -1,0 +1,146 @@
+.App {
+  height: 100vh;
+  color: #fff;
+  background-color: #020230;
+  display: flex;
+  flex-direction: column;
+}
+
+.main{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: url('https://i.pinimg.com/originals/f1/17/23/f11723f9894882a76ce18a626cc5ad69.jpg')
+  center;
+  height: 100%;
+  background-size: cover;
+}
+.quiz{
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.question{
+  width: 80%;
+  background: linear-gradient(#188241,black);
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid white;
+  font-size: 20px;
+}
+
+.answers{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+.answer{
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin: 0 10px 20px 10px;
+  background: linear-gradient(#0e0124,#22974d);
+  border: 1px solid white;
+  border-radius: 65px;
+  font-weight: 300;
+  font-size: 20px;
+  cursor: pointer;
+}
+.answer:hover,
+.answer.active{
+  background: mediumblue;
+}
+.item{
+  display: inline-block;
+  align-items: center;
+  padding: 2.5px;
+  border-radius: 5px;
+  width: auto;
+}
+.item.active{
+  background-color: teal;
+}
+.money{
+  background-color: #020230;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.money-list{
+  padding: 1px;
+  list-style: none;
+  max-width: 100%;
+}
+.amount{
+  font-size: 18px;
+  font-weight: 300;
+  text-align: center;
+}
+.answer.correct{
+  animation: correct 3s ease forwards;
+}
+@keyframes correct{
+   0%,
+   22%,
+   42% {
+    background: mediumblue;
+   }
+   20%,
+   40%,
+   60% {
+    background:linear-gradient(#0e0124,#22074d)
+   }
+   62%,
+   100% {
+    background: #33d40f;
+   }
+}
+.answer.wrong{
+  animation: wrong 3s ease forwards;
+}
+@keyframes wrong{
+   0%,
+   22%,
+   42% {
+    background: mediumblue;
+   }
+   20%,
+   40%,
+   60% {
+    background:linear-gradient(#0e0124,#22074d)
+   }
+   62%,
+   100% {
+    background: red;
+   }
+}
+
+.timer{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  /* border: 5px solid white; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50px;
+  left: 90px;
+  font-size: 30px;
+  font-weight: 700;
+}
+.earned{
+  position: relative;
+  margin: auto;
+  margin-top: 150px;
+  color: #fff;
+  font-weight: 600;
+}
